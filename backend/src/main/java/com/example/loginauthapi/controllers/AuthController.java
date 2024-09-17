@@ -25,7 +25,15 @@ public class AuthController {
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
 
-    @PostMapping("/login")
+	public AuthController(UserRepository repository, PasswordEncoder passwordEncoder, TokenService tokenService) {
+		super();
+		this.repository = repository;
+		this.passwordEncoder = passwordEncoder;
+		this.tokenService = tokenService;
+	}
+
+
+	@PostMapping("/login")
     public ResponseEntity login(@RequestBody LoginRequestDTO body){
         User user = this.repository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("User not found"));
         if(passwordEncoder.matches(body.password(), user.getPassword())) {

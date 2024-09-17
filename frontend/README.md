@@ -35,13 +35,6 @@ Here you list all prerequisites necessary for running your project. For example:
 - [Git 2](https://github.com)
 - [Angular CLI](https://angular.io/cli)
 
-<h3>Cloning</h3>
-
-How to clone your project
-
-```bash
-git clone https://github.com/Fernanda-Kipper/login-page.git
-```
 
 <h3>Starting</h3>
 
@@ -62,12 +55,6 @@ Here you can list the main routes of your API, and what are their expected reque
 | <kbd>/login</kbd>     | Page to login
 | <kbd>/user</kbd>     | Protected page that only logged in users can access
 
-<h2 id="contribute">📫 Contribute</h2>
-
-1. `git clone https://github.com/Fernanda-Kipper/text-editor.git`
-2. `git checkout -b feature/NAME`
-3. Follow commit patterns
-4. Open a Pull Request explaining the problem solved or feature made, if exists, append screenshot of visual modifications and wait for the review!
 
 <h3>Documentations that might help</h3>
 
