@@ -5,7 +5,14 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-image: url('/assets/svg/aaaa.webp'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+ 
 
     section {
         height: 100%; 
@@ -13,6 +20,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
     }
 
     .main-section {
@@ -20,6 +28,7 @@ main {
 
         flex-grow: 1;
         background-color: $gray-bg;
+        
     }
 
     .form-section {
@@ -28,6 +37,7 @@ main {
 
         img {
             margin-bottom: 0px;
+            
         }
 
         h2 {
