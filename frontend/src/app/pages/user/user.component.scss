@@ -12,7 +12,6 @@ main {
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição */
- 
 
     section {
         height: 100%; 
@@ -20,24 +19,15 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
     }
 
-    .main-section {
-        gap: 8px;
-
-        flex-grow: 1;
-        background-color: $gray-bg;
-        
-    }
-
+    /* Ajustando a primeira section */
     .form-section {
-        flex-grow: 0.3;
+        flex-basis: 30%; /* A primeira section ocupa 30% da largura */
         padding: 0 35px;
 
         img {
             margin-bottom: 0px;
-            
         }
 
         h2 {
@@ -47,7 +37,6 @@ main {
         }
 
         .btn-wrapper {
-            display: flex;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -87,18 +76,61 @@ main {
                 &:disabled {
                     opacity: 0.8;
                 }
-    
+
                 &.btn-primary {
                     background-color: $primary-color;
                     color: white;
-                    box-shadow:0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
+                    box-shadow: 0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.2);
                 }
-    
+
                 &.btn-secondary {
                     border: 1px solid $primary-color;
                     color: $primary-color;
                 }
             }
         }
+    }
+
+    /* Segunda section ajustada para ocupar 70% da tela */
+    .main-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 70%; /* A segunda section ocupa 70% da largura */
+        height: 100%;
+        gap: 8px;
+        padding: 1rem;
+        background-color: $gray-bg;
+    }
+
+    .text-left {
+        flex: 1;
+        padding-right: 2rem;
+        text-align: left;
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: $text-color;
+        }
+    }
+
+    .video-right {
+        flex: 1;
+        max-width: 50%; /* O vídeo ocupa no máximo 50% da área disponível */
+        margin-left: auto;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Adiciona cantos arredondados ao vídeo */
     }
 }

@@ -45,7 +45,7 @@ export class LoginComponent {
         this.toastService.success("Login feito com sucesso!");
         this.router.navigate(["/user"]); // Redireciona para a página 'user' após o login bem-sucedido
       },
-      error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
+      error: () => this.toastService.error("Usuario ou senha invalida!")
     });
   }
   
