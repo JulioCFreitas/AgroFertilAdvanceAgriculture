@@ -12,7 +12,9 @@ main {
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição */
-
+    background-color: #004d00; /* Fundo verde escuro */
+    color: rgb(182, 25, 25); /* Opcional: ajusta a cor do texto para branco */
+    
     section {
         height: 100%; 
         display: flex;
@@ -102,6 +104,7 @@ main {
         gap: 8px;
         padding: 1rem;
         background-color: $gray-bg;
+        
     }
 
     .text-left {
