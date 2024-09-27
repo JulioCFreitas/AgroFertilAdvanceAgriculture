@@ -12,7 +12,7 @@ main {
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição */
-    background-color: #004d00; /* Fundo verde escuro */
+    background-color: #094e09; /* Fundo verde escuro */
     color: rgb(182, 25, 25); /* Opcional: ajusta a cor do texto para branco */
     
     section {
@@ -24,116 +24,52 @@ main {
     }
 
     /* Ajustando a primeira section */
-    .form-section {
-        flex-basis: 30%; /* A primeira section ocupa 30% da largura */
-        padding: 0 35px;
-
-        img {
-            margin-bottom: 0px;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 0px;
-        }
-
-        .btn-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            gap: 0px;
-
-            .divider {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 20px;
-                width: 100%;
-
-                font-size: 14px;
-                color: $gray-bg;
-                font-weight: 400;
-                text-transform: uppercase;
-
-                div {
-                    flex-grow: 1;
-                    height: 2px;
-                    background-color: $gray-bg;
-                }
-            }
-
-            button {
-                width: 100%;
-                border-radius: 8px;
-                font-size: 16px;
-                font-weight: 500;
-                border: none;
-                background: transparent;
-                padding: 12px 24px;
-                cursor: pointer;
-
-                &:disabled {
-                    opacity: 0.8;
-                }
-
-                &.btn-primary {
-                    background-color: $primary-color;
-                    color: white;
-                    box-shadow: 0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.2);
-                }
-
-                &.btn-secondary {
-                    border: 1px solid $primary-color;
-                    color: $primary-color;
-                }
-            }
-        }
-    }
-
-    /* Segunda section ajustada para ocupar 70% da tela */
-    .main-section {
+    .hero-section {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between; /* Garante que o conteúdo de texto e o vídeo fiquem afastados */
         align-items: center;
-        flex-basis: 70%; /* A segunda section ocupa 70% da largura */
-        height: 100%;
-        gap: 8px;
-        padding: 1rem;
-        background-color: $gray-bg;
-        
+        padding: 50px;
+        background-color: #edeeed;
+        width: 100%; /* Faz com que a hero-section ocupe toda a largura disponível */
+        gap: 0; /* Remove qualquer espaço extra entre os elementos */
     }
+      
+      .hero-content {
+        flex: 1;  /* Faz o conteúdo de texto ocupar metade da tela */
+        max-width: 50%; /* Garante que o texto não ultrapasse 50% da tela */
+      }
 
-    .text-left {
-        flex: 1;
-        padding-right: 2rem;
-        text-align: left;
+      .hero-content h1 {
+        font-size: 2.5rem;
+        color: #2a2a2a;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        color: #555;
+      }
+      
+      .cta-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #66c005;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
 
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: $text-color;
-        }
+      .hero-image {
+        flex: 1;  /* Faz o vídeo ocupar metade da tela */
+        max-width: 50%; /* Garante que o vídeo não ultrapasse 50% da tela */
+        display: flex;
+        justify-content: center; /* Centraliza o vídeo horizontalmente */
+        align-items: center; /* Centraliza o vídeo verticalmente */
     }
-
-    .video-right {
-        flex: 1;
-        max-width: 50%; /* O vídeo ocupa no máximo 50% da área disponível */
-        margin-left: auto;
-    }
-
-    video {
-        width: 100%;
-        height: auto;
-        border-radius: 8px; /* Adiciona cantos arredondados ao vídeo */
-    }
+    
+ 
+  
 }

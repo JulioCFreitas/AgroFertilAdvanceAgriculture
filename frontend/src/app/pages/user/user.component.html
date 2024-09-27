@@ -1,39 +1,26 @@
 <main>
-    <section class="form-section">
-        <img src="/assets/svg/"/>
-        <h2>{{ title }}</h2>
-        <ng-content></ng-content>
-        <div class="btn-wrapper">
-            <button 
-                class="btn-primary" 
-                (click)="submit()"
-                [disabled]="disablePrimaryBtn"
-            >
-                {{ primaryBtnText }}
-            </button>
-            <div class="divider">
-                <div></div>
-                <span>or</span>
-                <div></div>
+   
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>AgroFertil Agricultura inteligente!</h1>
+                <p>Imagens atuais da plantação serão comparadas com um banco de dados contendo imagens digitalizadas de
+                    plantações saudáveis. Utilizando modelos matemáticos baseados em inteligência artificial (IA),
+                    ensinaremos o sistema a detectar infestações de pragas através das imagens capturadas por drones e
+                    satélite.
+                </p>
+                <button class="cta-button">Conheça o nosso trabalho</button>
             </div>
-            <button class="btn-secondary" (click)="navigate()">{{ secondaryBtnText }}</button>
+            <div class="hero-image">
+              
+                <div class="video-right">
+                    <!-- Video do YouTube com autoplay ativado -->
+                    <iframe width="150%" height="300" src="https://www.youtube.com/embed/nguVp16j6qA?autoplay=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- Segunda section com texto à esquerda e vídeo à direita -->
-    <section class="main-section">
-        <div class="text-left">
-            <h1>AgroFertil Agricultura inteligente!</h1>
-            <p>Imagens atual da plantação e teremos no banco de dados imagens digitalizadas de plantação sadia e com modelos matemáticos (IA) ensinaremos o sistema detectaremos a infestação de pragas pelas imagens captadas por drone.</p>
-        </div>
-        <div class="video-right">
-            <!-- Video do YouTube com autoplay ativado -->
-            <iframe width="100%" height="315" 
-                src="https://www.youtube.com/embed/nguVp16j6qA?autoplay=1" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+  
 </main>
