@@ -1,0 +1,17 @@
+<header>
+    <img src="/assets/svg/logo-agrofertil.svg" alt="Logo AgroFertil" class="logo-header" />
+    <nav class="nav-menu">
+        <a href="/sobre">Sobre</a>
+        <a href="/mercado">Mercado</a>
+        <a href="/solucoes">Soluções</a>
+        <a href="/contato">Contato</a>
+    </nav>
+  </header>
+  
+  <section class="features-section">
+    <div class="feature-card" *ngFor="let feature of features">
+      <img [src]="feature.icon" [alt]="feature.title">
+      <h3>{{ feature.title }}</h3>
+    </div>    
+  </section>
+  
