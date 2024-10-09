@@ -43,7 +43,7 @@ export class LoginComponent {
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
       next: () => {
         this.toastService.success("Login feito com sucesso!");
-        this.router.navigate(["/user"]); // Redireciona para a página 'user' após o login bem-sucedido
+        this.router.navigate(["/navegation"]); // Redireciona para a página 'navegation' após o login bem-sucedido
       },
       error: () => this.toastService.error("Usuario ou senha invalida!")
     });
