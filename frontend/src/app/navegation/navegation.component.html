@@ -1,48 +1,52 @@
 <main>
-  <!-- Faixa verde com logo e menu -->
-  <header class="header-bar">
-      <img src="/assets/svg/logo-agrofertil.svg" alt="Logo AgroFertil" class="logo-header" />
-      <nav class="nav-menu">
-          <a href="/sobre">Sobre</a>
-          <a href="/mercado">Mercado</a>
-          <a href="/solucoes">Soluções</a>
-          <a href="/contato">Contato</a>
-      </nav>
-  </header>
+    <!-- Faixa verde com logo e menu -->
+    <header class="header-bar">
+        <img src="/assets/svg/logoAgroFertil.jpeg" alt="Logo AgroFertil aaaaaaaaaaaaaaaaaaaa" class="logo-header" />
+        <nav class="nav-menu">
+            <a href="/sobre">Sobre</a>
+            <a href="/mercado">Mercado</a>
+            <a href="/solucoes">Soluções</a>
+            <a href="/contato">Contato</a>
+        </nav>
+    </header>
 
-  <!-- Seção dos quatro ícones com título -->
-  <section class="features-section">
-      <div class="feature-card">
-          <img src="/assets/icons/minha-terra.svg" alt="Minha Terra">
+    <!-- Seção dos quatro ícones com título -->
+    <section class="features-section">
+        <div class="feature-card" (click)="navigateToMinhaterra()">
+          <img src="/assets/svg/minha-terra.jpg" alt="Minha Terra">
           <h3>Minha Terra</h3>
-      </div>
-      <div class="feature-card">
-          <img src="/assets/icons/ia.svg" alt="I.A.">
+        </div>
+        <div class="feature-card" (click)="navigateToIA()">
+          <img src="/assets/svg/ia.webp" alt="I.A.">
           <h3>I.A.</h3>
-      </div>
-      <div class="feature-card">
-          <img src="/assets/icons/consultoria.svg" alt="Consultoria">
+        </div>
+        <div class="feature-card" (click)="navigateToConsultoria()">
+          <img src="/assets/svg/consultoria.jpeg" alt="Consultoria">
           <h3>Consultoria</h3>
-      </div>
-      <div class="feature-card">
-          <img src="/assets/icons/historico.svg" alt="Histórico">
+        </div>
+        <div class="feature-card" (click)="navigateToHistorico()">
+          <img src="/assets/svg/historico.jpeg" alt="Histórico">
           <h3>Histórico</h3>
-      </div>
-  </section>
+        </div>
+      </section>
+      
 
-  <!-- Seção Hero -->
-  <section class="hero-section">
-      <div class="hero-content">
-          <h1>AgroFertil Agricultura inteligente!</h1>
-          <p>Imagens atuais da plantação serão comparadas com um banco de dados contendo imagens digitalizadas de
-              plantações saudáveis. Utilizando modelos matemáticos baseados em inteligência artificial (IA),
-              ensinaremos o sistema a detectar infestações de pragas através das imagens capturadas por drones e
-              satélite.
-          </p>
-          <button class="cta-button">Conheça o nosso trabalho</button>
-      </div>
-      <div class="hero-image">
-          <img src="/assets/images/example-image.jpg" alt="Exemplo de Imagem">
-      </div>
-  </section>
+    <!-- Seção Hero -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>AgroFertil Agricultura inteligente!</h1>
+            <p>Imagens atuais da plantação serão comparadas com um banco de dados contendo imagens digitalizadas de
+                plantações saudáveis. Utilizando modelos matemáticos baseados em inteligência artificial (IA),
+                ensinaremos o sistema a detectar infestações de pragas através das imagens capturadas por drones e
+                satélite.
+            </p>
+            <button class="cta-button">Conheça o nosso trabalho</button>
+        </div>
+        <div class="hero-image">
+            <iframe width="150%" height="300" src="https://www.youtube.com/embed/nguVp16j6qA?autoplay=1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 </main>

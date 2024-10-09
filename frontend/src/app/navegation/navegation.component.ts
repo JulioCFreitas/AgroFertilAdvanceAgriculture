@@ -11,19 +11,19 @@ export class NavegationComponent {
 
   // Métodos de navegação para os botões
   navigateToMinhaterra() {
-    this.router.navigate(['/minhaterra']); // Altere para a rota correta
+    this.router.navigate(['/minha-terra']); // Rota correta para Minha Terra
   }
 
   navigateToIA() {
-    this.router.navigate(['/ia']); // Altere para a rota correta
+    this.router.navigate(['/ia']); // Rota correta para I.A.
   }
 
   navigateToConsultoria() {
-    this.router.navigate(['/consultoria']); // Altere para a rota correta
+    this.router.navigate(['/consultoria']); // Rota correta para Consultoria
   }
 
-  navigateToAnalise() {
-    this.router.navigate(['/analise']); // Altere para a rota correta
+  navigateToHistorico() {
+    this.router.navigate(['/historico']); // Rota correta para Histórico
   }
 
   // Outros métodos existentes
