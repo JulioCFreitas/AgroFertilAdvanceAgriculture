@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class NavegationComponent {
   features = [
-    { icon: '/assets/icons/minha-terra.svg', title: 'Minha Terra' },
-    { icon: '/assets/icons/ia.svg', title: 'I.A.' },
-    { icon: '/assets/icons/consultoria.svg', title: 'Consultoria' },
-    { icon: '/assets/icons/historico.svg', title: 'Histórico' }
+    { icon: '/assets/svg/minha-terra.jpg', title: 'Minha Terra' },
+    { icon: '/assets/svg/ia.webp', title: 'I.A.' },
+    { icon: '/assets/svg/consultoria.jpeg', title: 'Consultoria' },
+    { icon: '/assets/svg/historico.jpeg', title: 'Histórico' }
   ];
 }
