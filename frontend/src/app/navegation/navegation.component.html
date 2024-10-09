@@ -1,42 +1,40 @@
 <main>
   <header>
-    <img src="/assets/svg/login2.jpeg" alt="Logo AgroFertil" class="logo-header" />
     <nav class="nav-menu">
-      <a href="/sobre">Sobre</a>
-      <a href="/mercado">Mercado</a>
-      <a href="/solucoes">Soluções</a>
-      <a href="/contato">Contato</a>
+      <div *ngFor="let feature of features">
+        <a [routerLink]="feature.route" class="card-link">
+          <div class="nav-card">
+            <img [src]="feature.icon" [alt]="feature.title" />
+            <h3>{{ feature.title }}</h3>
+          </div>
+        </a>
+      </div>
     </nav>
   </header>
 
-  <section class="features-section">
-    <div class="feature-card" *ngFor="let feature of features">
-      <img [src]="feature.icon" [alt]="feature.title">
-      <h3>{{ feature.title }}</h3>
-    </div>    
-  </section>
-  <img src="">
-  <section>
-    <div class="hero-section">
-      <div class="hero-content">
-        <h1>AgroFertil Agricultura inteligente!</h1>
-        <p>
-          Imagens atuais da plantação serão comparadas com um banco de dados
-          contendo imagens digitalizadas de plantações saudáveis. Utilizando
-          modelos matemáticos baseados em inteligência artificial (IA),
-          ensinaremos o sistema a detectar infestações de pragas através das
-          imagens capturadas por drones e satélite.
-        </p>
-        <button class="cta-button">Conheça o nosso trabalho</button>
-      </div>
-      <div class="hero-image">
-        <div class="video-right">
-          <!-- Vídeo do YouTube com autoplay ativado -->
-          <iframe width="100%" height="300" src="https://www.youtube.com/embed/nguVp16j6qA?autoplay=1" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>AgroFertil Agricultura inteligente!</h1>
+      <p>
+        Imagens atuais da plantação serão comparadas com um banco de dados
+        contendo imagens digitalizadas de plantações saudáveis. Utilizando
+        modelos matemáticos baseados em inteligência artificial (IA),
+        ensinaremos o sistema a detectar infestações de pragas através das
+        imagens capturadas por drones e satélite.
+      </p>
+      <button class="cta-button">Conheça o nosso trabalho</button>
+    </div>
+    <div class="hero-image">
+      <div class="video-right">
+        <iframe
+          width="100%"
+          height="300"
+          src="https://www.youtube.com/embed/nguVp16j6qA?autoplay=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
-  </section>
+  </div>
 </main>

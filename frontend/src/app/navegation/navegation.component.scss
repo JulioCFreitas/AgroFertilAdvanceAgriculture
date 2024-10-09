@@ -1,135 +1,127 @@
-main{
-    display: block;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 20vh;
-    margin: 0;
-    padding: 1rem;
-    font-family: "Poppins", sans-serif;
-    background-image: url('/assets/svg/'); /* Substitua pelo caminho correto da sua imagem */
-    background-size: cover; /* Faz com que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição */
-    background-color: #094e09; /* Fundo verde escuro */
-    color: rgb(12, 9, 9); /* Opcional: ajusta a cor do texto para branco */
-}
-
-.navigation-section {
-    font-family: "Poppins", sans-serif;
-    padding: 2rem;
-    background-color: #0c0202; /* Fundo claro */
-}
-
+/* Centraliza os botões na parte superior */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 20px 0;
 }
 
-.logo-header {
-    max-width: 180px;
-}
-
+/* Estilo da navegação dos botões */
 .nav-menu {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  justify-content: space-around; /* Divide os botões igualmente */
+  gap: 20px; /* Espaçamento entre os botões */
+  width: 100%; /* Ocupa a largura completa da tela */
 }
 
-.nav-menu a {
-    text-decoration: none;
-    color: #4CAF50; /* Verde */
-    font-weight: bold;
+.card-link {
+  text-decoration: none;
+  width: calc(25% - 20px); /* Faz os botões ocuparem 25% da largura cada */
 }
 
-.features-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    text-align: center;
+.nav-card {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #00b200;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 200px; /* Altura fixa para padronizar os botões */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.feature-card {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+.nav-card:hover {
+  background-color: #00b200; /* Cor verde ao passar o mouse */
+  color: #fff; /* Texto branco ao passar o mouse */
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-card img {
-  max-width: 100px;
+.nav-card img {
+  max-width: 80px;
   margin-bottom: 1rem;
-  border-radius: 50%; /* Torna as imagens circulares */
-  border: 2px solid #00b200; /* Borda verde ao redor da imagem */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor das imagens */
-  object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+  border-radius: 50%; /* Faz as imagens ficarem circulares */
+  border: 2px solid #00b200;
+  object-fit: cover;
 }
 
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #edeeed;
-    width: 80%;
-    margin: 20px auto; /* Espaço entre a seção hero e o conteúdo acima/abaixo */
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 150px; /* Adiciona espaçamento para que o conteúdo não sobreponha os botões */
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+  color: rgb(182, 25, 25); /* Ajusta a cor do texto */
+}
 
-  .hero-content {
-    flex: 1;
-    max-width: 50%;
-    padding-right: 20px;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    color: #2a2a2a;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.5;
-  }
-  
-  .cta-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #66c005;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #4b8b04;
-  }
-  
-  .hero-image {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .video-right iframe {
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(12, 11, 11, 0.664);
-    max-width: 100%;
-    height: auto;
-  }
-  
-  
+/* Ajustando a seção principal */
+.hero-section {
+  display: flex;
+  justify-content: space-between; /* Garante que o conteúdo de texto e o vídeo fiquem afastados */
+  align-items: center;
+  padding: 50px;
+  background-color: #edeeed;
+  width: 80%; /* Ajuste a largura da seção */
+  margin-top: 30px; /* Espaço entre os botões e a seção hero */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #2a2a2a;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #555;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #66c005;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4b8b04;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-right iframe {
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
