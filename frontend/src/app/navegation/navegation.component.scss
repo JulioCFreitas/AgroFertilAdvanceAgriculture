@@ -1,87 +1,79 @@
-/* Centraliza os botões na parte superior */
-header {
+/* Estilo da faixa verde superior */
+.header-bar {
   width: 100%;
+  background-color: #094e09; /* Verde escuro */
+  color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #ffffff; /* Fundo branco */
-  padding: 20px 0;
+  padding: 15px 50px;
+  position: relative;
+  top: 0;
 }
 
-/* Estilo da navegação dos botões */
+.logo-header {
+  max-width: 150px;
+}
+
 .nav-menu {
   display: flex;
-  justify-content: space-around; /* Divide os botões igualmente */
-  gap: 20px; /* Espaçamento entre os botões */
-  width: 100%; /* Ocupa a largura completa da tela */
+  gap: 2rem;
 }
 
-.card-link {
+.nav-menu a {
+  color: white;
   text-decoration: none;
-  width: calc(25% - 20px); /* Faz os botões ocuparem 25% da largura cada */
-}
-
-.nav-card {
-  background-color: #fff;
-  color: #333;
-  border: 2px solid #00b200;
-  padding: 20px;
-  text-align: center;
-  border-radius: 15px;
-  font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  height: 200px; /* Altura fixa para padronizar os botões */
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para os ícones com títulos */
+.features-section {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  justify-content: space-evenly;
+  margin: 20px 0;
 }
 
-.nav-card:hover {
-  background-color: #00b200; /* Cor verde ao passar o mouse */
-  color: #fff; /* Texto branco ao passar o mouse */
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  max-width: 200px;
+  transition: transform 0.3s ease;
 }
 
-.nav-card img {
-  max-width: 80px;
-  margin-bottom: 1rem;
-  border-radius: 50%; /* Faz as imagens ficarem circulares */
-  border: 2px solid #00b200;
-  object-fit: cover;
+.feature-card:hover {
+  transform: translateY(-5px);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.feature-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
   margin: 0;
-  padding-top: 150px; /* Adiciona espaçamento para que o conteúdo não sobreponha os botões */
-  font-family: "Poppins", sans-serif;
-  background-color: #f0f0f0;
-  color: rgb(182, 25, 25); /* Ajusta a cor do texto */
+  font-size: 1.2rem;
 }
 
-/* Ajustando a seção principal */
+/* Estilo da seção hero */
 .hero-section {
   display: flex;
-  justify-content: space-between; /* Garante que o conteúdo de texto e o vídeo fiquem afastados */
+  justify-content: space-between;
   align-items: center;
   padding: 50px;
-  background-color: #edeeed;
-  width: 80%; /* Ajuste a largura da seção */
-  margin-top: 30px; /* Espaço entre os botões e a seção hero */
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
 }
 
 .hero-content {
   flex: 1;
   max-width: 50%;
-  padding-right: 20px;
 }
 
 .hero-content h1 {
@@ -98,30 +90,20 @@ main {
 .cta-button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #66c005;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #4b8b04;
+  background-color: #45a049;
 }
 
-.hero-image {
-  flex: 1;
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-right iframe {
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+.hero-image img {
   max-width: 100%;
-  height: auto;
+  border-radius: 8px;
 }
