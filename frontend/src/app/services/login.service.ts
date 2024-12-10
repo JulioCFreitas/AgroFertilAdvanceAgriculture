@@ -11,7 +11,7 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  login(email: string, password: string){
+  login(email: string, password: string) {
     return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", { email, password }).pipe(
       tap((value) => {
         sessionStorage.setItem("auth-token", value.token)
@@ -20,11 +20,18 @@ export class LoginService {
     )
   }
 
-  signup(name: string, email: string, password: string){
+  signup(name: string, email: string, password: string) {
+    console.log("Payload enviado para a API:", name, email, password);
+
     return this.httpClient.post<LoginResponse>(this.apiUrl + "/register", { name, email, password }).pipe(
-      tap((value) => {
-        sessionStorage.setItem("auth-token", value.token)
-        sessionStorage.setItem("username", value.name)
+      tap({
+        next: (response) => {
+          sessionStorage.setItem("auth-token", response.token);
+          sessionStorage.setItem("username", response.name);
+        },
+        error: (errorResponse) => {
+          console.error("Erro no servidor ao tentar registrar usuário:", errorResponse);
+        }
       })
     )
   }

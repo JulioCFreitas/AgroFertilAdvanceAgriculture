@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
 
+
+
 interface SignupForm {
   name: FormControl,
   email: FormControl,
@@ -43,12 +45,28 @@ export class SignUpComponent {
     })
   }
 
-  submit(){
-    this.loginService.signup(this.signupForm.value.name, this.signupForm.value.email, this.signupForm.value.password).subscribe({
-      next: () => this.toastService.success("Usuario criado com sucesso!"),
-      error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
-    })
-  }
+  submit() {
+    if (this.signupForm.valid) {
+        this.loginService.signup(
+            this.signupForm.value.name, 
+            this.signupForm.value.email, 
+            this.signupForm.value.password
+        ).subscribe({
+            next: () => {
+                this.toastService.success("Usuário criado com sucesso!");
+                this.router.navigate(["login"]);
+            },
+            error: (err) => {
+                console.error("Erro ao criar usuário:", err);  // Exibe os detalhes do erro
+                console.error("Erro detalhado:", err.message);  // Exibe a mensagem de erro
+                this.toastService.error("Erro inesperado! Tente novamente mais tarde.");
+            }
+        });
+    } else {
+        this.toastService.error("Formulário inválido! Verifique os campos.");
+    }
+}
+
 
   navigate(){
     this.router.navigate(["login"])

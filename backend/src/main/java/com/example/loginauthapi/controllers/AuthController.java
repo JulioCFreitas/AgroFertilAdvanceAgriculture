@@ -44,6 +44,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody RegisterRequestDTO body){
+    System.out.println("Recebido no servidor: " + body.email() + ", " + body.name() + ", " + body.password());
         Optional<User> user = this.repository.findByEmail(body.email());
 
         if(user.isEmpty()) {
