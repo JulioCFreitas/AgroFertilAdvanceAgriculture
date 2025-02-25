@@ -2,8 +2,11 @@ package com.example.loginauthapi.controllers;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +22,9 @@ import com.example.loginauthapi.repositories.UserRepository;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
+	
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
@@ -30,7 +36,7 @@ public class AuthController {
 		this.tokenService = tokenService;
 	}
 
-
+	@CrossOrigin(origins = "http://agrofertiludi.online")
 	@PostMapping("/login")
     public ResponseEntity login(@RequestBody LoginRequestDTO body){
         User user = this.repository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("User not found"));
@@ -41,7 +47,7 @@ public class AuthController {
         return ResponseEntity.badRequest().build();
     }
 
-
+	@CrossOrigin(origins = "http://localhost:4200/")
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody RegisterRequestDTO body){
     System.out.println("Recebido no servidor: " + body.email() + ", " + body.name() + ", " + body.password());

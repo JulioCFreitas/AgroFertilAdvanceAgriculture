@@ -1,0 +1,6 @@
+2025-02-16 14:26:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
+SELECT @@character_set_database, @@sql_mode [42001-214]
+2025-02-16 14:26:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table users (email varchar(255), id varchar(255) not null, name varchar(255), password varchar(255), primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table users (email varchar(255), id varchar(255) not null, name varchar(255), password varchar(255), primary key (id)) engine=InnoDB [42001-214]
