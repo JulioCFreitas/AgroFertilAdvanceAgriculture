@@ -1,6 +1,6 @@
 {
     "/auth": {
-      "target": "http://localhost:8080",
+      "target": "http://50.6.198.227:8081",
       "secure": false,
       "changeOrigin": true
     }
